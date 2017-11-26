@@ -1,7 +1,9 @@
-require('babel-register')({
-  only: ['config'],
-  presets: ['./config/babel/node/dev'],
-  retainLines: true,
+const path = require("path");
+
+require("babel-register")({
+  only: ["config"],
+  presets: [path.resolve(__dirname, "config/babel/node/dev")],
+  retainLines: true
 });
-require('babel-polyfill');
-require('./config/gulp');
+require("babel-polyfill");
+require("./config/gulp");
